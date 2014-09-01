@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$("#elfinder").elfinder({
 		url : 'plugins/elfinder/connectors/php/connector.php', 
-		lang : 'en',
+		lang : 'zh_CN',
 		docked : true,
 		height: 300
 	});

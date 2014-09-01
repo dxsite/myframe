@@ -28,8 +28,9 @@ class elFinderLogger implements elFinderILogger {
 }
 
 $opts = array(
-	'root'            => '../../files',                       // path to root directory
-	'URL'             => 'http://localhost/git/elfinder/files/', // root directory URL
+	//'root'            => '../../../../../../../../myframe',                       // path to root directory
+	'root'            =>'D:/DedeAMPZ/WebRoot/luo/myframe',
+	'URL'             => 'http://localhost/myframe/', // root directory URL
 	'rootAlias'       => 'Home',       // display this instead of root directory name
 	//'uploadAllow'   => array('images/*'),
 	//'uploadDeny'    => array('all'),
