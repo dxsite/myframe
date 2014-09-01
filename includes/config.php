@@ -1,11 +1,11 @@
 <?php
-
+defined('Access')||die('Access Denied');
 $config = array(
-	//Êı¾İ¿â
+	//ï¿½ï¿½İ¿ï¿½
 	'host'=>'localhost',
 	'username'=>'root',
 	'passwd'=>'123456',
-	'database'=>'myframe',
+	'database'=>'dcms',
 	'char'=>'utf8',
 	
 	'default_c' =>'index',

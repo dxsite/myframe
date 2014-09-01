@@ -1,4 +1,5 @@
 <?php
+defined('Access')||die('Access Denied');
 class View {
 	public $vars = array();
 	public function assign($var,$value){
@@ -17,10 +18,10 @@ class View {
 			$this->fetch($filename);
 		}else{
 			$filename = ROOT .'view/Home/'.$filename;
-			$this->fetch($filename);
+			$this->fetchHome($filename);
 		}
 		if(!file_exists($filename.'.html')){
-			echo 'Ä£°æ²»´æÔÚ';
+			echo 'æ¨¡æ¿æ–‡ä»¶ä¸å­˜åœ¨';
 			exit();
 		}
 		
@@ -35,7 +36,7 @@ class View {
 		$smarty->left_delimiter = "{#";
 		$smarty->right_delimiter = "#}";
 		$smarty->debugging = true;
-		$smarty->caching = true;
+		$smarty->caching = false;
 		$smarty->cache_lifetime = 120;
 		$smarty->debugging = FALSE;
 		
@@ -49,6 +50,20 @@ class View {
 		}
 		
 		$smarty->display("$file.html");
+	}
+	
+	
+	public function fetchHome($file){
+		
+		$fh = file_get_contents($file.".html");
+		
+		$reg = '/{D:(artlist)/U';
+		
+		preg_match($reg,$fh,$result);
+		
+		print_r($result);
+		
+		file_put_contents(a.".htm", $result);
 	}
 	
 }

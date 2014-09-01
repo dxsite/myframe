@@ -1,3 +1,7 @@
 eclipse.preferences.version=1
+encoding//controller/Admin/FileAction.class.php=UTF-8
+encoding//controller/Admin/IndexAction.class.php=UTF-8
 encoding//includes/Model.class.php=UTF-8
-encoding//view/index.php=UTF-8
+encoding//includes/View.class.php=UTF-8
+encoding//model/CatModel.class.php=UTF-8
+encoding//view/Admin/index.html=UTF-8

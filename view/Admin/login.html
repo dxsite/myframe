@@ -78,15 +78,15 @@
     	<h1>Login</h1>
         <div class="mws-login-lock"><img src="{#$smarty.const.ADMIN_TPL#}css/icons/24/locked-2.png" alt="" /></div>
     	<div id="mws-login-form">
-        	<form class="mws-form" action="{#$smarty.const.SERVER#}admin.php?c=index&a=welcome" method="post">
+        	<form class="mws-form" action="{#$smarty.const.SERVER#}admin.php?c=index&a=login_do" method="post">
                 <div class="mws-form-row">
                 	<div class="mws-form-item large">
-                    	<input type="text" class="mws-login-username mws-textinput" placeholder="username" />
+                    	<input name="username" type="text" class="mws-login-username mws-textinput" placeholder="username" />
                     </div>
                 </div>
                 <div class="mws-form-row">
                 	<div class="mws-form-item large">
-                    	<input type="password" class="mws-login-password mws-textinput" placeholder="password" />
+                    	<input type="passwd" name="passwd" class="mws-login-password mws-textinput" placeholder="password" />
                     </div>
                 </div>
                 <div class="mws-form-row">

@@ -165,6 +165,16 @@
 	margin-right:16px;
 }
 
+.mws-form .mws-form-inline .varname{
+	width:25%;
+	padding:7px 0;
+	line-height:20px;
+	text-align:center;
+	margin:0px;
+	display:block;
+	float:right;
+}
+
 /* Block Form Elements */
 
 .mws-form .mws-form-block label, 
@@ -290,7 +300,7 @@
 	cursor:pointer;
 }
 
-.mws-form-message.error
+.mws-form-message.error,.mws-form-message.error a
 {
 	background-color:#ffcbca;
 	background-image:url(../../images/core/message-error.png);
@@ -300,8 +310,9 @@
 	color:#9b4449;
 }
 
-.mws-form-message.success
-{
+.mws-form-message.success,.mws-form-message.success a
+{	
+	text-decoration:none;
 	background-color:#e1f1c0;
 	background-image:url(../../images/core/message-success.png);
 	background-position:12px 12px;

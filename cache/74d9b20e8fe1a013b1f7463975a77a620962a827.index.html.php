@@ -1,4 +1,4 @@
-<?php /*%%SmartyHeaderCode:2282953ccbb1ac57614-16618783%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1506353cf1dd27a5858-18367456%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -9,18 +9,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2282953ccbb1ac57614-16618783',
-  'cache_lifetime' => 120,
+  'nocache_hash' => '1506353cf1dd27a5858-18367456',
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_53cccc9eee7100_14824418',
-  'variables' => 
-  array (
-    'lists' => 0,
-    'new_item' => 0,
-  ),
+  'unifunc' => 'content_53cf500c810381_05740218',
   'has_nocache_code' => false,
+  'cache_lifetime' => 120,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53cccc9eee7100_14824418')) {function content_53cccc9eee7100_14824418($_smarty_tpl) {?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php if ($_valid && !is_callable('content_53cf500c810381_05740218')) {function content_53cf500c810381_05740218($_smarty_tpl) {?><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
  <head>
   <title> New Document </title>

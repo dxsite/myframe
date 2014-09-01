@@ -1,27 +1,36 @@
 <?php
+
+defined('Access')||die('Access Denied');
+
 class Controller{
 	/**
-	 * ÊµÀý»¯view¸³Öµ
+	 * viewå¯¹è±¡
 	 */
 	protected $view = null;
 	/**
-	 * ¶ÁÈ¡ÅäÖÃÎÄ¼þ
+	 * é…ç½®å¯¹è±¡
 	 * @var array
 	 */
 	protected $confs = null;
 	/**
-	 * ¹¹Ôìº¯Êý
-	 * ÊµÀý»¯View,conf
+	 * æž„é€ å‡½æ•°
+	 * å®žä¾‹åŒ–View,conf
 	 */
 	public function __construct(){
 		$this->view = new View();
 		$this->confs = conf::getIns();
+		$this->_initialize();
 	}
 	/**
-	 * Èë¿Ú
-	 * @param string $permission È¨ÏÞ¿ØÖÆ
+	 * åˆå§‹åŒ–
+	 */
+	protected function _initialize(){}
+	/**
+	 * å¼•ç”¨æ–¹æ³•
+	 * @param string $permission æƒé™
 	 */
 	final public function Run($permission = ''){
+		
 		
 		$control = $_GET['c']?$_GET['c']:$this->confs->default_c;
 		$action = $_GET['a']?$_GET['a']:$this->confs->default_a;
@@ -37,38 +46,39 @@ class Controller{
 		$controlFile = ROOT .'controller/'.$dir.'/'.$class.'Action.class.php';
 		
 		if(!file_exists($controlFile)){
-			echo '¿ØÖÆÆ÷²»´æÔÚ';
+			echo 'ç±»æ–‡ä»¶ä¸å­˜åœ¨';
 			exit();
 		}
 		
 		$class = $class.'Action';
 		if(!class_exists($class)){
-			exit('Î´¶¨ÒåµÄ¿ØÖÆÆ÷Àà'. $class);
+			exit('ç±»ä¸å­˜åœ¨'. $class);
 		}
 		
 		$instance = new $class();
 		if(!method_exists($instance,$action)){
-			exit('Î´¶¨ÒåµÄ¿ØÖÆÆ÷·½·¨'. $action);
+			exit('æ–¹æ³•ä¸å­˜åœ¨'. $action);
 		}
 		$instance->$action();
 		
 	}
 	/**
-	 * Ñ°ÕÒÄ£°æ
-	 * @param string $view Ä£°æ
-	 * @param string $permission È¨ÏÞ
+	 * æ¨¡æ¿
+	 * @param string $view æ¨¡æ¿
+	 * @param string $permission æƒé™
 	 */
 	public function display($view,$permission = ''){
 		$this->view->display($view,$permission);
 	}
 	/**
-	 * ¸³Öµ
+	 * èµ‹å€¼Öµ
 	 * @param string $key
 	 * @param string $value
 	 */
 	public function assign($key,$value){
 		$this->view->assign($key, $value);
 	}
+	
 	
 }
 

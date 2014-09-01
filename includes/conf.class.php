@@ -1,5 +1,5 @@
 <?php
-
+defined('Access')||die('Access Denied');
 class conf{
 
 	private $info = array();

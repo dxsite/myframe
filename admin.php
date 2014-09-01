@@ -1,4 +1,5 @@
 <?php
+define(Access, 'admin');
 include('./includes/init.php');
 
 define(SERVER,str_replace('admin.php','','http://'.$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']));
@@ -12,6 +13,12 @@ function __autoload($class){
 	}
 }
 
+
 $a = new Controller();
 
 $a->Run('admin');
+
+if(!$_SESSION['username']){
+	
+}
+

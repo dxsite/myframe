@@ -1,21 +1,21 @@
-<?php /*%%SmartyHeaderCode:2049253cccc5dada796-76427873%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:882953cf4c9935e6e5-47425240%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '7a0acfc73239e7d20f11eb41767d0b4c2951f1ea' => 
     array (
       0 => 'D:\\DedeAMPZ\\WebRoot\\luo\\myframe\\view\\Admin\\index.html',
-      1 => 1406019995,
+      1 => 1406094510,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2049253cccc5dada796-76427873',
+  'nocache_hash' => '882953cf4c9935e6e5-47425240',
   'cache_lifetime' => 120,
   'version' => 'Smarty-3.1.19',
-  'unifunc' => 'content_53ce299d154fd3_21618965',
+  'unifunc' => 'content_53cf532e9f80f6_08555144',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53ce299d154fd3_21618965')) {function content_53ce299d154fd3_21618965($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if ($_valid && !is_callable('content_53cf532e9f80f6_08555144')) {function content_53cf532e9f80f6_08555144($_smarty_tpl) {?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -479,88 +479,43 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                         <table class="mws-table">
                             <thead>
                                 <tr>
-                                    <th>Rendering engine</th>
-                                    <th>Browser</th>
+                                    <th>栏目ID</th>
+                                    <th>栏目名称</th>
                                     <th>Platform(s)</th>
                                     <th>Engine version</th>
                                     <th>CSS grade</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="gradeX">
-                                    <td>Trident</td>
-                                    <td>Internet
-                                         Explorer 4.0</td>
+                                                            <tr class="gradeX">
+                                    <td>1</td>
+                                    <td>笔记</td>
                                     <td>Win 95+</td>
                                     <td class="center">4</td>
                                     <td class="center">X</td>
                                 </tr>
-                                <tr class="gradeC">
-                                    <td>Trident</td>
-                                    <td>Internet
-                                         Explorer 5.0</td>
+                                                            <tr class="gradeX">
+                                    <td>2</td>
+                                    <td>生活</td>
                                     <td>Win 95+</td>
-                                    <td class="center">5</td>
-                                    <td class="center">C</td>
+                                    <td class="center">4</td>
+                                    <td class="center">X</td>
                                 </tr>
-                                <tr class="gradeA">
-                                    <td>Trident</td>
-                                    <td>Internet
-                                         Explorer 5.5</td>
+                                                            <tr class="gradeX">
+                                    <td>3</td>
+                                    <td>事业</td>
                                     <td>Win 95+</td>
-                                    <td class="center">5.5</td>
-                                    <td class="center">A</td>
+                                    <td class="center">4</td>
+                                    <td class="center">X</td>
                                 </tr>
-                                <tr class="gradeA">
-                                    <td>Trident</td>
-                                    <td>Internet
-                                         Explorer 6</td>
-                                    <td>Win 98+</td>
-                                    <td class="center">6</td>
-                                    <td class="center">A</td>
+                                                            <tr class="gradeX">
+                                    <td>4</td>
+                                    <td>感情</td>
+                                    <td>Win 95+</td>
+                                    <td class="center">4</td>
+                                    <td class="center">X</td>
                                 </tr>
-                                <tr class="gradeA">
-                                    <td>Trident</td>
-                                    <td>Internet Explorer 7</td>
-                                    <td>Win XP SP2+</td>
-                                    <td class="center">7</td>
-                                    <td class="center">A</td>
-                                </tr>
-                                <tr class="gradeA">
-                                    <td>Trident</td>
-                                    <td>AOL browser (AOL desktop)</td>
-                                    <td>Win XP</td>
-                                    <td class="center">6</td>
-                                    <td class="center">A</td>
-                                </tr>
-                                <tr class="gradeA">
-                                    <td>Gecko</td>
-                                    <td>Firefox 1.0</td>
-                                    <td>Win 98+ / OSX.2+</td>
-                                    <td class="center">1.7</td>
-                                    <td class="center">A</td>
-                                </tr>
-                                <tr class="gradeA">
-                                    <td>Gecko</td>
-                                    <td>Firefox 1.5</td>
-                                    <td>Win 98+ / OSX.2+</td>
-                                    <td class="center">1.8</td>
-                                    <td class="center">A</td>
-                                </tr>
-                                <tr class="gradeA">
-                                    <td>Gecko</td>
-                                    <td>Camino 1.5</td>
-                                    <td>OSX.3+</td>
-                                    <td class="center">1.8</td>
-                                    <td class="center">A</td>
-                                </tr>
-                                <tr class="gradeA">
-                                    <td>Gecko</td>
-                                    <td>Netscape 7.2</td>
-                                    <td>Win 95+ / Mac OS 8.6-9.2</td>
-                                    <td class="center">1.7</td>
-                                    <td class="center">A</td>
-                                </tr>
+                             
                             </tbody>
                         </table>
                     </div>

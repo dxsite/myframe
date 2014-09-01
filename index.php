@@ -1,4 +1,5 @@
 <?php
+define(Access, 'index');
 include('./includes/init.php');
 
 function __autoload($class){
