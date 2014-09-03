@@ -17,8 +17,8 @@ class CatModel extends Model{
 	}
 	
 	
-	public function catListNoSort(){
-		$sql = "select cat_id,cat_name,cat_pid from ".$this->table;
+	public function catListNoSort($where = ' where 1'){
+		$sql = "select cat_id,cat_name,cat_pid from ".$this->table.$where;
 		return $this->getList($sql);
 	}
 	

@@ -41,7 +41,7 @@ class ArtModel extends Model {
 	}
 	
 	public function artList($where = 1,$offset = 0,$perpage = 10,$order = 'desc'){
-		$sql = "select art_id,title,".$this->table.".cat_id,cat_name,keywords,description,flag from " .$this->table. " left join category on ".$this->table.".cat_id = category.cat_id where ".$where. " order by art_id ".$order." limit ".$offset*$perpage.",".$perpage;
+		$sql = "select art_id,title,".$this->table.".cat_id,cat_name,keywords,description,flag,pubdate from " .$this->table. " left join category on ".$this->table.".cat_id = category.cat_id where ".$where. " order by art_id ".$order." limit ".$offset*$perpage.",".$perpage;
 		//echo $sql;
 		//exit();
 		return $this->getList($sql);
@@ -53,12 +53,12 @@ class ArtModel extends Model {
 	}
 	
 	public function artLists($where = 1,$offset = 0,$perpage = 10,$order = 'desc'){
-		$sql = "select art_id,content,title,".$this->table.".cat_id,cat_name,keywords,description,flag from " .$this->table. " left join category on ".$this->table.".cat_id = category.cat_id where ".$where. " order by art_id ".$order." limit ".$offset*$perpage.",".$perpage;
+		$sql = "select art_id,content,title,".$this->table.".cat_id,cat_name,keywords,description,flag,pubdate from " .$this->table. " left join category on ".$this->table.".cat_id = category.cat_id where ".$where. " order by art_id ".$order." limit ".$offset*$perpage.",".$perpage;
 		return $this->getList($sql);
 	}
 	
 	public function artInfo($id){
-		$sql = "select art_id,content,title,".$this->table.".cat_id,cat_name,keywords,description,flag from " .$this->table. " left join category on ".$this->table.".cat_id = category.cat_id where art_id = ".$id;
+		$sql = "select art_id,content,title,".$this->table.".cat_id,cat_name,keywords,description,flag,pubdate from " .$this->table. " left join category on ".$this->table.".cat_id = category.cat_id where art_id = ".$id;
 		return $this->getInfo($sql);
 	}
 	
@@ -96,6 +96,8 @@ class ArtModel extends Model {
 		$sql = "delete from ".$this->table." where  ".$where;
 		return $this->query($sql);
 	}
+	
+	
 }
 
 ?>

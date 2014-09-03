@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>黑色Html5响应式个人博客模板――主题《如影随形》</title>
+<meta name="keywords" content="个人博客模板,博客模板,响应式" />
+<meta name="description" content="如影随形主题的个人博客模板，神秘、俏皮。" />
+<link href="{#$smarty.const.HOME_TPL#}css/base.css" rel="stylesheet">
+<link href="{#$smarty.const.HOME_TPL#}css/style.css" rel="stylesheet">
+<link href="{#$smarty.const.HOME_TPL#}css/media.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="{#$smarty.const.HOME_TPL#}js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="ibody">
+  <header>
+    <h1>如影随形</h1>
+    <h2>影子是一个会撒谎的精灵，它在虚空中流浪和等待被发现之间;在存在与不存在之间....</h2>
+    <div class="logo"><a href="/"></a></div>
+    <nav id="topnav"><a href="index.html">首页</a><a href="about.html">关于我</a>
+    {#foreach from=$catlist item=cat#}
+      <a href="/">{#$cat.cat_name#}</a>
+    {#/foreach#}
+    </nav>
+  </header>
+  <article>
+    <h2 class="about_h">您现在的位置是：<a href="/">首页</a>><a href="1/">模板分享</a>><a href="1/">个人博客模板</a></h2>
+    <div class="index_about">
+      <h2 class="c_titile">{#$info.title#}</h2>
+      <p class="box_c"><span class="d_time">发布时间：{#$info.pubdate|date_format:'%Y-%m-%d'#}</span><span>编辑：杨青</span><span>浏览（390）</span><span>评论览（14）</span></p>
+      <ul class="infos">
+        {#$info.content#}
+      </ul>
+      <div class="keybq">
+        <p><span>关键字词</span>：{#$info.keywords#}</p>
+      </div>
+      <div class="nextinfo">
+        <p>上一篇：{#$prev#}
+        <p>下一篇：{#$next#}</p>
+      </div>
+      <div class="otherlink">
+        <h2>相关文章</h2>
+        <ul>
+        {#foreach from=$artlist item=art#}
+          <li><a href="index.php?c=art&a=indexs&art_id={#$art.art_id#}">{#$art.title#}</a></li>
+        {#/foreach#}
+        </ul>
+      </div>
+    </div>
+  </article>
+  <aside>
+    <div class="rnav">
+    {#assign var="j" value="1"#}
+    {#foreach from=$catlist item=cat#}
+      <li class="rnav{#$j#}"><a href="/">{#$cat.cat_name#}</a></li>
+      {#assign var="j" value=$j+1#}
+    {#/foreach#}
+    </div>
+    <div class="ph_news">
+      <h2>
+        <p>文章推荐</p>
+      </h2>
+      <ul class="ph_n">
+      {#assign var="i" value="1"#}
+      {#foreach from=$artlist item=art#}
+        <li><span class="num{#$i#}">{#$i#}</span><a href="index.php?c=art&a=indexs&art_id={#$art.art_id#}">{#$art.title#}</a></li>
+        {#assign var="i" value=$i+1#}
+      {#/foreach#}
+      </ul>
+      <h2>
+        <p>最新评论</p>
+      </h2>
+      <ul class="pl_n">
+        <dl>
+          <dt><img src="{#$smarty.const.HOME_TPL#}images/s8.jpg"> </dt>
+          <dt> </dt>
+          <dd>DanceSmile
+            <time>49分钟前</time>
+          </dd>
+          <dd><a href="/">文章非常详细，我很喜欢.前端的工程师很少，我记得几年前yahoo花高薪招聘前端也招不到</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="{#$smarty.const.HOME_TPL#}images/s7.jpg"> </dt>
+          <dt> </dt>
+          <dd>
+            <time>2小时前</time>
+          </dd>
+          <dd><a href="/">我手机里面也有这样一个号码存在</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="{#$smarty.const.HOME_TPL#}images/s6.jpg"> </dt>
+          <dt> </dt>
+          <dd>小林博客
+            <time>8月7日</time>
+          </dd>
+          <dd><a href="/">博客色彩丰富，很是好看</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="{#$smarty.const.HOME_TPL#}images/003.jpg"> </dt>
+          <dt> </dt>
+          <dd>DanceSmile
+            <time>49分钟前</time>
+          </dd>
+          <dd><a href="/">文章非常详细，我很喜欢.前端的工程师很少，我记得几年前yahoo花高薪招聘前端也招不到</a></dd>
+        </dl>
+        <dl>
+          <dt><img src="{#$smarty.const.HOME_TPL#}images/002.jpg"> </dt>
+          <dt> </dt>
+          <dd>yisa
+            <time>2小时前</time>
+          </dd>
+          <dd><a href="/">我手机里面也有这样一个号码存在</a></dd>
+        </dl>
+      </ul>
+      <h2>
+        <p>最近访客</p>
+        <ul>
+          <img src="{#$smarty.const.HOME_TPL#}images/vis.jpg"><!-- 直接使用“多说”插件的调用代码 -->
+        </ul>
+      </h2>
+    </div>
+    <div class="copyright">
+      <ul>
+        <p> Design by <a href="/">DanceSmile</a></p>
+        <p>蜀ICP备11002373号-1</p>
+        </p>
+      </ul>
+    </div>
+  </aside>
+  <script src="{#$smarty.const.HOME_TPL#}js/silder.js"></script>
+  <div class="clear"></div>
+  <!-- 清除浮动 --> 
+</div>
+</body>
+</html>

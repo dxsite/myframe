@@ -18,7 +18,7 @@ class View {
 			$this->fetch($filename);
 		}else{
 			$filename = ROOT .'view/Home/'.$filename;
-			$this->fetchHome($filename);
+			$this->fetch($filename);
 		}
 		if(!file_exists($filename.'.html')){
 			echo '模板文件不存在';
@@ -52,7 +52,7 @@ class View {
 		$smarty->display("$file.html");
 	}
 	
-	
+	/*
 	public function fetchHome($file){
 		
 		$fh = file_get_contents($file.".html");
@@ -64,8 +64,18 @@ class View {
 		print_r($result);
 		
 		file_put_contents(a.".htm", $result);
+		
+		
+		$template = new Template();
+		$template->startLeft = '{D:';
+		$template->startRight = '/}';
+		$template->endLeft = '{/D:';
+		$template->Right = '}';
+		$template->fetch($file.".html");
+		//$template->parse();
+
 	}
-	
+	*/
 }
 
 ?>

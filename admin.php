@@ -18,7 +18,3 @@ $a = new Controller();
 
 $a->Run('admin');
 
-if(!$_SESSION['username']){
-	
-}
-

@@ -12,11 +12,16 @@ include(ROOT . 'includes/conf.class.php');
 include(ROOT . 'includes/Controller.class.php');
 include(ROOT . 'includes/View.class.php');
 include(ROOT . 'includes/Model.class.php');
+include(ROOT . 'includes/Template.class.php');
 include(ROOT . 'libs/helper/Upload.class.php');
 include(ROOT . 'libs/helper/Page.class.php');
 include(ROOT . 'libs/helper/Folder.class.php');
-if(get_magic_quotes_gpc()!=1){
+if(!get_magic_quotes_gpc()) {
+    array_walk_recursive($_GET,'addslashes_real');
+    array_walk_recursive($_POST,'addslashes_real');
+    array_walk_recursive($_COOKIE,'addslashes_real');
 }
+
 
 
 session_start();
